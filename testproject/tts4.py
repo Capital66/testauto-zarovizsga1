@@ -22,3 +22,5 @@ eredmeny_text = driver.find_elements_by_xpath('//*[@id="results"]/li/text()')
 for j in eredmeny_text:
     j.count('fej')
 assert j.count() >= 30
+
+driver.close()
