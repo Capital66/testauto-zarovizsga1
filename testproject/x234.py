@@ -14,9 +14,9 @@ b_value = ('12', '12')
 
 # TC01 helyes kitöltés ellenőrzése
 a = driver.find_element_by_id('a')
-a.send_keys(a_value [0])
-b= driver.find_element_by_id('b')
-b.send_keys(b_value [0])
+a.send_keys(a_value[0])
+b = driver.find_element_by_id('b')
+b.send_keys(b_value[0])
 kalkulacio_button = driver.find_element_by_id('submit')
 kalkulacio_button.click()
 eredmeny = driver.find_element_by_id('result')
@@ -26,8 +26,8 @@ assert eredmeny.text == '222'
 # TC02 kitöltés nem számokkal
 a.clear()
 b.clear()
-a.send_keys(a_value [1])
-b.send_keys(b_value [1])
+a.send_keys(a_value[1])
+b.send_keys(b_value[1])
 kalkulacio_button.click()
 time.sleep(2)
 assert eredmeny.text == 'NaN'
